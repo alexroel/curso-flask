@@ -1,0 +1,18 @@
+{% extends './base.html' %}
+
+{% block title %} Proyectos {% endblock %}
+
+{% block content %}
+<h2>Insertar Proyectos</h2>
+
+<form action="{{ url_for('project.insert') }} " method="POST">
+    <label for="title">Titulo</label>
+    <input type="text" id="title" name="title"> <br>
+    <label for="description">Descripción</label> <br>
+    <textarea name="description" id="description" cols="50" rows="10"></textarea>
+    <br>
+
+    <input type="submit" value="Guardar">
+
+</form>
+{% endblock %}

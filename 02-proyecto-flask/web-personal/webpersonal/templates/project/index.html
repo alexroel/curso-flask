@@ -1,0 +1,24 @@
+{% extends './base.html' %}
+
+{% block title %} Proyectos {% endblock %}
+
+{% block content %}
+    <br><br>
+    <a href="{{ url_for('project.create')}}">Crear nuevo proyecto</a>
+    <br><br>
+    <table>
+        <tr>
+            <th>Tiulo</th>
+            <th>Descripción</th>
+        </tr>
+        {% for project in projects %}
+        <tr>
+            <td>{{ project.title }}</td>
+            <td>{{ project.description }}</td>
+            <td><a href="{{ url_for('project.edit', id=project['id']) }}">Editar</a></td>
+            <td><a href="{{ url_for('project.delete', id=project['id']) }}">Eliminar</a></td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

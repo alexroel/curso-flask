@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludar</title>
+</head>
+<body>
+
+    {% if nombre != None and edad == None %}
+        <h2>Hola {{nombre}}</h2>
+    {% elif nombre != None and edad != None %}
+        <h2>Hola {{nombre}} y tu edad es {{edad}}</h2>
+    {% endif %}
+</body>
+</html>

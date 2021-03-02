@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex - {% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('base.home') }}">Inicio</a>
+        <a href="{{ url_for('base.portfolio') }}">Protafolio</a>
+        <a href="{{ url_for('base.contact') }}">Contacto</a>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+    <footer>
+        Pie de Página
+    </footer>
+</body>
+</html>
